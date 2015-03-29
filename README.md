@@ -1,5 +1,5 @@
 # shareIIT
-DATE: Sunday 
+DATE: Sunday March 29, 2015 
 TO: karl.stolley@gmail.com
 FROM: jsilva4@hawk.iit.edu, neeraj@hawk.iit.edu, sburnet1@hawk.iit.edu
 SUBJECT: Project 2: Beta
