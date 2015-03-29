@@ -1,4 +1,17 @@
 # shareIIT
+DATE: Sunday 
+TO: karl.stolley@gmail.com
+FROM: jsilva4@hawk.iit.edu, neeraj@hawk.iit.edu, sburnet1@hawk.iit.edu
+SUBJECT: Project 2: Beta
+
+Professor Stolley,
+
+We would like to start this memo by providing some much needed information about Project 2: Beta. After careful deliberation we have decided to start Project 2 from scratch and not proceed with any of the apps that we presented to the rest of the class last Tuesday. 
+
+Share IIT! is a community sharing app that allows for a small community to share items of interest without the exchange of money. Our app will allow students to borrow items they might only need one time during their four or five year stay at Illinois Institute of Technology. We would like to connect students that are in possession of items with students that are in need/search of such items in an effort to reduce unnecessary purchases and facilitate more interactions within the community.  With this app students can share things like books, toasters, waffle makers, bicycles, and calculators. 
+
+The app will ask users to create a profile for a variety of purposes and a login for security purposes.
+
 Execution:
 
 
