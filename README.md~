@@ -12,17 +12,6 @@ Share IIT! is a community sharing app that allows for a small community to share
 
 The app will ask users to create a profile for a variety of purposes and a login for security purposes.
 
-
-Here is a full list of the things that we want our Share IIT! app to do:
- 
-1. Display a list of different categories: services, electronics, kitchen, automobiles
-2. Each of those categories will act like a post where each user can enter and comment whether he/she is willing to share their items or able to offer the services required by the user
-3. Each time a service is rendered/items are shared, the app will generate an agreement which will work as a transaction between two parties and can/will be used incase of any damage is incurred by either party
-4. After a transaction is successfully completed the app should change the state of the post/transaction to complete 
-5. The transactions/posts can be given a review post completion (this deliverable will only be implemented if time permits) 
-6. Some of the basic features such as: editing user account information, editing the post, deleting the post, logging in, logging out, deleting a user, creating a user, creating an admin (maybe use singleton pattern here)
-
-
 Execution:
 
 
