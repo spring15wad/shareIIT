@@ -1,0 +1,23 @@
+!!!5
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ShareIITTest
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header
+      %h1= link_to 'Requests', root_url
+      - if user_signed_in?
+        %h2
+          Welcome,
+          = link_to current_user.name, account_path
+          = link_to 'Log out', logout_path
+      - else
+        %h2= link_to 'Log In with Google', login_path(provider: 'google_oauth2')
+
+    %div#main
+      = yield
+    %footer
+      %small Site content and design by shareIIT. All rights reserved.

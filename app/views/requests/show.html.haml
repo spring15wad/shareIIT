@@ -1,0 +1,9 @@
+%h1.title= @request.title
+%div
+  = @request.description
+  %small
+    Posted by
+    - if current_user && @request.user.name == current_user.name
+      = link_to "You", account_path
+    - else
+      = @request.user.name

@@ -1,0 +1,23 @@
+= form_for [:account, @request] do |f|
+  - if @request.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@request.errors.count, "error")} prohibited this request from being saved:"
+      %ul
+        - @request.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_area :description
+  = radio_button("request","requesttype", "service")
+  = label_tag(:requesttype_service, "Request Services")
+  = radio_button("request","requesttype", "book")
+  = label_tag(:requesttype_book, "Request Books")
+  = radio_button(:"request","requesttype", "misc")
+  = label_tag(:requesttype_misc, "Request Other Items")
+
+  .actions
+    = f.submit 'Save'
