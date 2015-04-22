@@ -11158,3 +11158,131 @@ Processing by RequestsController#index as HTML
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
 >>>>>>> dev
+
+
+Started GET "/" for ::1 at 2015-04-21 20:32:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RequestsController#index as HTML
+  Rendered requests/index.html.haml within layouts/application (3.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 445ms (Views: 419.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/scaffolds.self-c2a17eca52b550ffd43f42b8fee1edfde18531497ac8ef6ab2d297f8e78236bc.css?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-04-21 20:32:26 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-04-21 20:32:40 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-04-21 20:32:40 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=305f16f16f9f1246976902d0706ccde1b5eb8d3944017385&code=4/D825h8QmR4rL5JK3B5zoCgcUVqBwB1K3Y7-MKeOjhXo.UsblqLv6KF8aXmXvfARQvtjIpYK9mQI" for ::1 at 2015-04-21 20:32:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"305f16f16f9f1246976902d0706ccde1b5eb8d3944017385", "code"=>"4/D825h8QmR4rL5JK3B5zoCgcUVqBwB1K3Y7-MKeOjhXo.UsblqLv6KF8aXmXvfARQvtjIpYK9mQI", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "google_oauth2"], ["uid", "113278888909165279357"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-21 20:32:43 -0500
+Processing by RequestsController#index as HTML
+  Rendered requests/index.html.haml within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/type/service" for ::1 at 2015-04-21 20:32:52 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"service"}
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (requesttype = 'service')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/type/book" for ::1 at 2015-04-21 20:32:56 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"book"}
+  [1m[35mRequest Load (0.1ms)[0m  SELECT "requests".* FROM "requests" WHERE (requesttype = 'book')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/type/book" for ::1 at 2015-04-21 20:33:02 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"book"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (requesttype = 'book')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/type/book" for ::1 at 2015-04-21 20:33:03 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"book"}
+  [1m[35mRequest Load (0.2ms)[0m  SELECT "requests".* FROM "requests" WHERE (requesttype = 'book')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/type/book" for ::1 at 2015-04-21 20:33:04 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"book"}
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (requesttype = 'book')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/type/book" for ::1 at 2015-04-21 20:33:05 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"book"}
+  [1m[35mRequest Load (0.2ms)[0m  SELECT "requests".* FROM "requests" WHERE (requesttype = 'book')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-21 20:33:06 -0500
+Processing by RequestsController#index as HTML
+  Rendered requests/index.html.haml within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.1ms)
