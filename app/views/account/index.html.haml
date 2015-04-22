@@ -1,8 +1,10 @@
+%section
 
 %p#notice= notice
+%big= link_to "Create New Request", new_account_request_path
 %h1
-  = "Your Requests"
-  %small= link_to "Create New", new_account_request_path
+  = "Here are your Requests:"
+  
 %ul
   - @requests.each do |request|
     %li
@@ -10,3 +12,6 @@
       %div= request.description
       %small= link_to "Edit", edit_account_request_path(request)
       %small= link_to "Delete", account_request_path(request), method: :delete, data: { confirm: "Are you sure?" }
+
+ 
+

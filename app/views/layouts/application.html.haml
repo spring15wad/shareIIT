@@ -11,7 +11,7 @@
       %h1= link_to 'Requests', root_url
       - if user_signed_in?
         %h2
-          Welcome,
+          Welcome to our request App!
           = link_to current_user.name, account_path
           = link_to 'Log out', logout_path
       - else
