@@ -8752,3 +8752,61 @@ Processing by RequestsController#index as HTML
   Rendered requests/index.html.haml within layouts/application (0.4ms)
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
 Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-21 20:27:07 -0500
+Processing by RequestsController#index as HTML
+  Rendered requests/index.html.haml within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/scaffolds.self-d7e77ca5e649bc496dd98c760ca1ce0b7107901674eaf454b3892c4971ad074f.css?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2015-04-21 20:27:07 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-04-21 20:27:08 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-04-21 20:27:09 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=6b21868ad1f1957d1148d6a77fc9b93729a3267f514a1347&code=4/gVJkYcqsFAeqGeaRgOKk2sW-zwXL2_MWqvEPsplSEAk.Qvis1XE2ol4UXmXvfARQvthehXi9mQI" for ::1 at 2015-04-21 20:27:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"6b21868ad1f1957d1148d6a77fc9b93729a3267f514a1347", "code"=>"4/gVJkYcqsFAeqGeaRgOKk2sW-zwXL2_MWqvEPsplSEAk.Qvis1XE2ol4UXmXvfARQvthehXi9mQI", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "google_oauth2"], ["uid", "113278888909165279357"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-21 20:27:10 -0500
+Processing by RequestsController#index as HTML
+  Rendered requests/index.html.haml within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
