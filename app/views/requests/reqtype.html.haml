@@ -1,0 +1,11 @@
+%h1 Latest Requests
+%ul
+  - @requestserv.each do |request|
+    %li
+      = link_to request.title, public_request_path(request)
+      - if current_user && request.user.name == current_user.name
+        %small= link_to "You", account_path
+      - else
+        %small= request.user.name
+
+= link_to "back"

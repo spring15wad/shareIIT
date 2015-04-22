@@ -8,6 +8,12 @@ class RequestsController < ApplicationController
     @requests = Request.all
   end
 
+  # GET /type/:request
+  # GET /type/books
+  def reqtype
+    @requestserv = Request.where("requesttype = '#{params[:request]}'")
+  end
+
   # GET /1
   # GET /1.json
   def show
