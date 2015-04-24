@@ -8,16 +8,56 @@
     = csrf_meta_tags
   %body
     %header
-      %h1= link_to 'Requests', root_url
       - if user_signed_in?
+        .wrapper
+          .main
+            %a#head{:href => root_url}
+              %img{:alt => "", :src => "img/logo.png"}/
+            %nav.nav
+              %a#headalt{:href => root_url} shareIIT
+              %ul.navlist
+                %li.navitem
+                  %a{:href => root_url} all requests
+                %li.navitem
+                  %a{:href => account_path} my requests
+                %li.navitem
+                  %a{:href => ""} extra
+                %li.navitem
+                  %a{:href => ""} extra
+        / End NAV bar
+        %p#logoutopt= link_to 'Log out', logout_path
         %h2
-          Welcome to our request App!
+          Welcome,
           = link_to current_user.name, account_path
-          = link_to 'Log out', logout_path
       - else
-        %h2= link_to 'Log In with Google', login_path(provider: 'google_oauth2')
+        .wrapper
+          .main
+            %a#head{:href => root_url}
+              %img{:alt => "", :src => "img/logo.png"}/
+            %nav.nav
+              %a#headalt{:href => root_url} shareIIT
+              %ul.navlist
+                %li.navitem
+                  %a#abtus{:href => "#"} about us
+                %li.navitem
+                  %a#howitworks{:href => "#"} how it works
+                %li.navitem
+                  %a#signin{:href => "#"} startSharing
+          #abtuscontent
+            .indexcontent
+              shareIIT is specially made for IIT students that want to help each other by sharing books, miscelleanous items (waffle maker, bike or a camera) etc. and performing services like pc/phone repairs, automobile repairs and tutoring services! This concept was designed after taking into account the requests made in IIT Undergraduate Students Facebook page and IIT Chicago Facebook page. The designers of this interface, Javier Silva, Steve Burnette and Neeraj Soparawala decided to pursue this idea as a class project initially. Over time they realized the need for this to be public, making it free for the IIT community.
 
-    %div#main
+          #howitworkscontent
+            .indexcontent
+              Simplicity was the key factor being considered while designing the interface! After clicking the ‘login with your hawk email’, our interface takes care of getting all your details from google! ‘my requests’ tab will display all your requests along with giving you an option to create a new request. Currently we have three request types; Service, Book and Misc. Choose the service request type if you need something repaired or need help with a class (tutoring). If need a book for tomorrow’s exam/homework, you can select the Book request type! Similarly, select Miscellaneous for all other requests (bikes, cars, waffle makers, coffee machines, Ethernet cables, etc.)!
+          #signincontent
+            .loginstyle
+              %td
+                .h2style
+                  %h2= link_to 'Log In with Google', login_path(provider: 'google_oauth2')
+
+
+      %div#main
       = yield
-    %footer
+      %footer#footermargin
       %small Site content and design by shareIIT. All rights reserved.

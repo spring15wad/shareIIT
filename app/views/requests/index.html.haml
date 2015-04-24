@@ -1,15 +1,35 @@
-<<<<<<< HEAD
-%h1 Here are the Latest Requests!
-=======
-%h1 Latest Requests
->>>>>>> dev
-%ul
-  %li
-    = link_to "Service Requests", request_path(request: "service")
-  %li
-    = link_to "Book Requests", request_path(request: "book")
-  %li
-    = link_to "Misc Requests", request_path(request: "misc")
+!!!5
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ShareIITTest
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+- if user_signed_in?
+  %ul
+    .allreq
+      %li
+        .testings
+          %big= link_to "Service Requests", request_path(request: "service")
+      %li
+        .testings
+          %big= link_to "Book Requests", request_path(request: "book")
+      %li
+        .testings
+          %big= link_to "Misc Requests", request_path(request: "misc")
+-else
+  /%h3 Three Recent Requests
+  /%ul
+  /  - @requests.take(3).each do |request|
+  /    %li
+  /      = link_to request.title, public_request_path(request)
+  /      - if current_user && request.user.name == current_user.name
+  /        %small= link_to "You", account_path
+  /      - else
+  /        %small= request.user.name
+
 
 
 
