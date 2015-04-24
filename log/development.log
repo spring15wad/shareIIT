@@ -33795,3 +33795,149 @@ Processing by RequestsController#index as HTML
   Rendered requests/index.html.haml within layouts/application (39.4ms)
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
 Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:32:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered requests/index.html.haml within layouts/application (603.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 709ms (Views: 689.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-04-24 18:32:30 -0500
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2015-04-24 18:32:31 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=f7f00148f6d5b00e64c272c12ef9308bbed7bc4fa8e0d701&code=4/8kGucU4S2B0_UJ9M_nefRpVgzDsGMXflDAIOPxUhZlM.wn3nz1MgyggXXmXvfARQvtjU-4zbmQI" for ::1 at 2015-04-24 18:32:32 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"f7f00148f6d5b00e64c272c12ef9308bbed7bc4fa8e0d701", "code"=>"4/8kGucU4S2B0_UJ9M_nefRpVgzDsGMXflDAIOPxUhZlM.wn3nz1MgyggXXmXvfARQvtjU-4zbmQI", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "google_oauth2"], ["uid", "113278888909165279357"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:32:33 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/index.html.haml within layouts/application (31.8ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/type/service" for ::1 at 2015-04-24 18:32:35 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"service"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (requesttype = 'service')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (106.5ms)
+Completed 200 OK in 157ms (Views: 155.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:32:45 -0500
+Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requests/index.html.haml within layouts/application (33.5ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:32:47 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/index.html.haml within layouts/application (48.8ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/type/book" for ::1 at 2015-04-24 18:32:49 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"book"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (requesttype = 'book')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:32:50 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/index.html.haml within layouts/application (29.2ms)
+Completed 200 OK in 80ms (Views: 79.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/type/misc" for ::1 at 2015-04-24 18:32:52 -0500
+Processing by RequestsController#reqtype as HTML
+  Parameters: {"request"=>"misc"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (requesttype = 'misc')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered requests/reqtype.html.haml within layouts/application (46.6ms)
+Completed 200 OK in 104ms (Views: 103.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/account" for ::1 at 2015-04-24 18:32:57 -0500
+Processing by AccountController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE "requests"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered account/index.html.haml within layouts/application (37.2ms)
+Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/account" for ::1 at 2015-04-24 18:33:01 -0500
+Processing by AccountController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE "requests"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered account/index.html.haml within layouts/application (30.8ms)
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/account" for ::1 at 2015-04-24 18:33:02 -0500
+Processing by AccountController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE "requests"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered account/index.html.haml within layouts/application (32.1ms)
+Completed 200 OK in 101ms (Views: 99.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/account" for ::1 at 2015-04-24 18:33:02 -0500
+Processing by AccountController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.1ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE "requests"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered account/index.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/account" for ::1 at 2015-04-24 18:33:36 -0500
+Processing by AccountController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRequest Load (0.2ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE "requests"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered account/index.html.haml within layouts/application (34.9ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:33:37 -0500
+Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered requests/index.html.haml within layouts/application (28.7ms)
+Completed 200 OK in 85ms (Views: 84.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for ::1 at 2015-04-24 18:33:40 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-24 18:33:40 -0500
+Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered requests/index.html.haml within layouts/application (30.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.2ms)
