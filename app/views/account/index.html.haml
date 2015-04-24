@@ -1,17 +1,27 @@
+!!!5
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ShareIITTest
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
 %section
 
 %p#notice= notice
 %big= link_to "Create New Request", new_account_request_path
-%h1
+%h3
   = "Here are your Requests:"
-  
-%ul
-  - @requests.each do |request|
-    %li
-      %h2= link_to request.title, public_request_path(request)
-      %div= request.description
-      %small= link_to "Edit", edit_account_request_path(request)
-      %small= link_to "Delete", account_request_path(request), method: :delete, data: { confirm: "Are you sure?" }
 
- 
+%ul#sepreq
+  - @requests.each do |request|
+    .seperatereq
+      %li#sepreq
+        %h2= link_to request.title, public_request_path(request)
+        %div= request.description
+        %small= link_to "Edit", edit_account_request_path(request)
+        %small= link_to "Delete", account_request_path(request), method: :delete, data: { confirm: "Are you sure?" }
+
+
 

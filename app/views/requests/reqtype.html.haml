@@ -1,11 +1,25 @@
-%h1 Latest Requests
-%ul
-  - @requestserv.each do |request|
-    %li
-      = link_to request.title, public_request_path(request)
-      - if current_user && request.user.name == current_user.name
-        %small= link_to "You", account_path
-      - else
-        %small= request.user.name
+!!!5
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ShareIITTest
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
 
-= link_to "back"
+- if user_signed_in?
+  %h1 List of requests
+  %ul#sepreq
+    - @requestserv.each do |request|
+      .seperatereq
+      %li#sepreq
+        %h2= link_to request.title, public_request_path(request)
+        %div= request.description
+        - if current_user && request.user.name == current_user.name
+          %small= link_to " - You", account_path
+        - else
+          %small= request.user.name
+- else
+  please login to see the detailed requests
+
+%big= link_to "back", root_url
