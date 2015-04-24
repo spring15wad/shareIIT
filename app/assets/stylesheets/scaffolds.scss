@@ -1,15 +1,17 @@
 body {
-  background-color: #700;
-  color: #FFF;
+  background-color: white;
+  color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  height:100%;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  list-style:none;
 }
 
 pre {
@@ -19,13 +21,14 @@ pre {
 }
 
 a {
-  color: #FFF;
+  text-decoration:none;
+  color: black;
   &:visited {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #700;
+    text-decoration:none;
+    color: red;
   }
 }
 
@@ -66,5 +69,165 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+/* Customr scss */
+
+#head {
+  float: left;
+  padding-left: 0.2em;
+}
+
+#headalt {
+  display: none;
+}
+
+.wrapper {
+  max-width:1280px;
+  width:95%;
+  margin:0 auto;
+  position:relative;
+  min-height:100%;
+  height:100%;
 
 }
+.main {
+  width:100%;
+  margin:0.625em 0;
+  text-align:center;
+  height:100%;
+}
+
+//colors
+$gray: grey;
+$black: black;
+
+.nav {
+	position: relative;
+	display: inline-block;
+	font-size: 0.875em;
+	font-weight: 900;
+}
+.navlist {
+}
+.navitem {
+	float: left;
+	*display: inline;
+	zoom: 1;
+	a {
+		display: block;
+		padding: 0.938em 0.750em;
+		color: $gray;
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+.seperatereq {
+  width: 100%;
+  clear: both;
+  float: none;
+  border-top: 1px solid #DDD;
+
+}
+
+#sepreq {
+  font-size: 1em;
+  padding: .5em .25em .25em .25em;
+  padding-bottom: .5em;
+}
+
+#logoutopt {
+  margin-left: 90%;
+}
+
+.indexcontent {
+  line-height: 2.5em;
+  text-align: left;
+  margin-top: 6em;
+  width: 80%;
+}
+
+.loginstyle {
+  margin-top:27%;
+}
+.h2style {
+  margin-left:40%;
+
+}
+
+#footermargin {
+ margin-top:20%;
+}
+
+.testings {
+  height: 4em;
+}
+
+#main {
+  width:100%;
+  margin-top:4em;
+}
+.allreq {
+  display:inline-block;
+  width:100%;
+}
+
+  /* Mobile Nav */
+  .nav-mobile {
+    display:none;
+    cursor:pointer;
+    position:absolute;
+    float:left;
+    top:0.313em;
+    left:0;
+    background:#5B5757 url(../img/nav.svg) no-repeat center center;
+    height:2.188em;
+    width:2.188em;
+    border-radius:0.313em;
+    -webkit-border-radius:0.313em;
+    -moz-border-radius:0.313em;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    #head {
+      display: none;
+    }
+
+    #headalt {
+      display: inline-block;
+      text-align: center;
+      font-family:"Open Sans";
+      color: grey;
+      font-size: 2em;
+    }
+
+    .nav-mobile {
+	    display: inline-block;
+    }
+    .nav {
+	    width: 100%;
+	    padding: 15px 0 0;
+    }
+    .navlist {
+	    display: none;
+    }
+    .navitem {
+	    width: 100%;
+	    float: none;
+	    a {
+		    background: none;
+		    padding: 10px;
+		    margin-left: -2.8em;
+	    }
+    }
+    .nav-active {
+	    display: block;
+    }
+    .nav-mobile-open {
+	    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+	    border-radius: 0.313em 0.313em 0 0;
+    }
+  }
+
