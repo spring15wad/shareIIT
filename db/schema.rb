@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421043628) do
+ActiveRecord::Schema.define(version: 20150428020024) do
+
+  create_table "replyposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "replyuid"
+    t.integer  "request_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "replyposts", ["request_id"], name: "index_replyposts_on_request_id"
 
   create_table "requests", force: :cascade do |t|
     t.string   "title"

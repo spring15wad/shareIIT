@@ -17,6 +17,9 @@ class RequestsController < ApplicationController
   # GET /1
   # GET /1.json
   def show
+    @replyposts = Replypost.all
+    @replypost = Replypost.new
+    $testa = @request.id
   end
 
 

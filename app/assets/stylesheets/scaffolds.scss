@@ -22,9 +22,9 @@ pre {
 
 a {
   text-decoration:none;
-  color: black;
+  color: #E02B1B;
   &:visited {
-    color: #666;
+    color: #DF594F;
   }
   &:hover {
     text-decoration:none;
@@ -98,6 +98,7 @@ div {
   height:100%;
 }
 
+
 //colors
 $gray: grey;
 $black: black;
@@ -124,12 +125,59 @@ $black: black;
 	}
 }
 
+/* replies display */
+
+.seperatereply {
+  width: 90%;
+  clear: both;
+  float: none;
+  border-top: 1px solid #DDD;
+  margin-top:-1.25em;
+}
+
+#contentmargin {
+  margin-top: 1em;
+}
+
+.replybuttons {
+  width: 6em;
+}
+
+.editbutton {
+  float:left;
+  width: 1.5em;
+}
+
+.deletebutton {
+  float: right;
+  margin-right: 0.1em;
+  width: 2.5em;
+}
+
+.contentreply {
+  margin-left: 3em;
+  margin-bottom: 1em;
+}
+
+/* comments input */
+
+.field {
+  margin-top: 1.5em;
+}
+
+.linktouser {
+  a:visited {
+  color: #DF594F;
+  }
+}
+
+/* requests display css */
+
 .seperatereq {
   width: 100%;
   clear: both;
   float: none;
   border-top: 1px solid #DDD;
-
 }
 
 #sepreq {
@@ -140,6 +188,8 @@ $black: black;
 
 #logoutopt {
   margin-left: 90%;
+  float: right;
+  display: inline;
 }
 
 .indexcontent {
@@ -154,7 +204,6 @@ $black: black;
 }
 .h2style {
   margin-left:40%;
-
 }
 
 #footermargin {
@@ -201,6 +250,10 @@ $black: black;
       font-family:"Open Sans";
       color: grey;
       font-size: 2em;
+    }
+
+    #logoutopt {
+      margin-left: 85%;
     }
 
     .nav-mobile {

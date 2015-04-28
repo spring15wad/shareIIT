@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :replyposts
   get 'account/index'
 
   root 'requests#index'
