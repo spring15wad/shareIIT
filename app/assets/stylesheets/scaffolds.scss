@@ -1,6 +1,6 @@
 body {
-  background-color: white;
-  color: #333;
+  background-image: url('wallpaper.jpg');
+  color: white;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -100,8 +100,8 @@ div {
 
 
 //colors
-$gray: grey;
-$black: black;
+$gray: red;
+$black: white;
 
 .nav {
 	position: relative;
@@ -248,7 +248,7 @@ $black: black;
       display: inline-block;
       text-align: center;
       font-family:"Open Sans";
-      color: grey;
+      color: red;
       font-size: 2em;
     }
 
