@@ -73,6 +73,7 @@ $(document).ready(function(){
 
  if ($("#noticewhite").text().length > 0) {
      $('#noticewhite').show();
+
      //setTimeout(hawkalert, 250);
    }
 
