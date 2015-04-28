@@ -28,7 +28,7 @@
         %p#logoutopt= link_to 'Log out', logout_path
         %h2
           Welcome,
-          = link_to current_user.name, account_path
+          = link_to current_user.name, account_path, class: "linktouser"
       - else
         .wrapper
           .main
