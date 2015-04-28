@@ -67,13 +67,13 @@ $(document).ready(function(){
  toggleClass(toggle, 'nav-active');
  };
 
-   function hawkalert() {
-    alert("Please Sign in with your hawk email!");
-  }
+//   function hawkalert() {
+  //  alert("Please Sign in with your hawk email!");
+ // }
 
  if ($("#noticewhite").text().length > 0) {
-     $('#noticewhite').hide();
-     setTimeout(hawkalert, 250);
+     $('#noticewhite').show();
+     //setTimeout(hawkalert, 250);
    }
 
 });
