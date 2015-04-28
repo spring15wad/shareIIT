@@ -8,7 +8,7 @@
     = csrf_meta_tags
 
 - if user_signed_in?
-  %h1 List of requests
+  %h2 List of requests
   %ul#sepreq
     - @requestserv.each do |request|
       .seperatereq
@@ -19,6 +19,7 @@
           %small= link_to " - You", account_path
         - else
           %small= request.user.name
+
 - else
   please login to see the detailed requests
 

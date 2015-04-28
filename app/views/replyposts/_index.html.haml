@@ -1,23 +1,24 @@
-%h1 Listing replyposts
-
-%table
-  %thead
-    %tr
-      %th Content
-      %th Replyuid
-      %th
-      %th
-      %th
-
-  %tbody
-    - @replyposts.each do |replypost|
-      %tr
-        %td= replypost.content
-        %td= replypost.replyuid
-        %td= link_to 'Show', replypost
-        %td= link_to 'Edit', edit_replypost_path(replypost)
-        %td= link_to 'Destroy', replypost, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+%h3 Recent Replies
+%p#sepreq
+ - @replyposts.each do |replypost|
+  - if replypost.request_id == $testa
+   .contentreply
+    .seperatereply
+     #contentmargin
+     - @uname2 = replypost.replyuid
+     - @uname = User.find_by_id(@uname2)
+     %p
+      %strong= @uname.name
+      = ':'
+      = replypost.content
+      %strong ........
+      %strong= time_ago_in_words(replypost.created_at)
+      %strong back
+     .replybuttons
+      - if replypost.replyuid == current_user.id
+       .editbutton
+        = button_to 'Edit', edit_replypost_path(replypost), :method => 'get'
+       .deletebutton
+        = button_to 'Delete Comment', replypost, :method => :delete, :data => { :confirm => 'Delete this comment?' }
+     %br
 %br
-
-= link_to 'New Replypost', new_replypost_path

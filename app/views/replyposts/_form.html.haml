@@ -7,10 +7,6 @@
           %li= msg
 
   .field
-    = f.label :content
-    = f.text_area :content
-  .field
-    = f.label :replyuid
-    = f.number_field :replyuid
+    = f.text_area :content, :size => "40x3", :placeholder => "Reply"
   .actions
     = f.submit 'Save'
