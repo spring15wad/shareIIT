@@ -1,0 +1,23 @@
+%h1 Listing replyposts
+
+%table
+  %thead
+    %tr
+      %th Content
+      %th Replyuid
+      %th
+      %th
+      %th
+
+  %tbody
+    - @replyposts.each do |replypost|
+      %tr
+        %td= replypost.content
+        %td= replypost.replyuid
+        %td= link_to 'Show', replypost
+        %td= link_to 'Edit', edit_replypost_path(replypost)
+        %td= link_to 'Destroy', replypost, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Replypost', new_replypost_path
