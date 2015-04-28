@@ -1,0 +1,342 @@
+/* line 1, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-image: url(/assets/wallpaper-52ff7af595410ad78f1fb947af6a2105542c074dcf81c71595fa5419cdcb0f87.jpg);
+  color: white;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  height: 100%;
+}
+
+/* line 10, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  list-style: none;
+}
+
+/* line 17, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 23, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+a {
+  text-decoration: none;
+  color: #E02B1B;
+}
+/* line 26, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #DF594F;
+}
+/* line 29, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+/* line 36, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 41, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 45, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 51, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 68, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* Customr scss */
+/* line 76, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#head {
+  float: left;
+  padding-left: 0.2em;
+}
+
+/* line 81, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#headalt {
+  display: none;
+}
+
+/* line 85, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.wrapper {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+
+/* line 94, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.main {
+  width: 100%;
+  margin: 0.625em 0;
+  text-align: center;
+  height: 100%;
+}
+
+/* line 106, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.nav {
+  position: relative;
+  display: inline-block;
+  font-size: 0.875em;
+  font-weight: 900;
+}
+
+/* line 114, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.navitem {
+  float: left;
+  *display: inline;
+  zoom: 1;
+}
+/* line 118, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.navitem a {
+  display: block;
+  padding: 0.938em 0.750em;
+  color: red;
+}
+/* line 122, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.navitem a:hover {
+  color: white;
+}
+
+/* replies display */
+/* line 130, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.seperatereply {
+  width: 90%;
+  clear: both;
+  float: none;
+  border-top: 1px solid #DDD;
+  margin-top: -1.25em;
+}
+
+/* line 138, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#contentmargin {
+  margin-top: 1em;
+}
+
+/* line 142, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.replybuttons {
+  width: 6em;
+}
+
+/* line 146, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.editbutton {
+  float: left;
+  width: 1.5em;
+}
+
+/* line 151, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.deletebutton {
+  float: right;
+  margin-right: 0.1em;
+  width: 2.5em;
+}
+
+/* line 157, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.contentreply {
+  margin-left: 3em;
+  margin-bottom: 1em;
+}
+
+/* comments input */
+/* line 164, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.field {
+  margin-top: 1.5em;
+}
+
+/* line 169, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.linktouser a:visited {
+  color: #DF594F;
+}
+
+/* requests display css */
+/* line 176, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.seperatereq {
+  width: 100%;
+  clear: both;
+  float: none;
+  border-top: 1px solid #DDD;
+}
+
+/* line 183, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#sepreq {
+  font-size: 1em;
+  padding: .5em .25em .25em .25em;
+  padding-bottom: .5em;
+}
+
+/* line 189, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#logoutopt {
+  margin-left: 90%;
+  float: right;
+  display: inline;
+}
+
+/* line 195, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.indexcontent {
+  line-height: 2.5em;
+  text-align: left;
+  margin-top: 6em;
+  width: 80%;
+}
+
+/* line 202, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.loginstyle {
+  margin-top: 27%;
+}
+
+/* line 205, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.h2style {
+  margin-left: 40%;
+}
+
+/* line 209, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#footermargin {
+  margin-top: 20%;
+}
+
+/* line 213, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.testings {
+  height: 4em;
+}
+
+/* line 217, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+#main {
+  width: 100%;
+  margin-top: 4em;
+}
+
+/* line 221, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.allreq {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Mobile Nav */
+/* line 227, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+.nav-mobile {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  float: left;
+  top: 0.313em;
+  left: 0;
+  background: #5B5757 url(../img/nav.svg) no-repeat center center;
+  height: 2.188em;
+  width: 2.188em;
+  border-radius: 0.313em;
+  -webkit-border-radius: 0.313em;
+  -moz-border-radius: 0.313em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  /* line 243, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  #head {
+    display: none;
+  }
+
+  /* line 247, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  #headalt {
+    display: inline-block;
+    text-align: center;
+    font-family: "Open Sans";
+    color: red;
+    font-size: 2em;
+  }
+
+  /* line 255, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  #logoutopt {
+    margin-left: 85%;
+  }
+
+  /* line 259, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .nav-mobile {
+    display: inline-block;
+  }
+
+  /* line 262, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .nav {
+    width: 100%;
+    padding: 15px 0 0;
+  }
+
+  /* line 266, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .navlist {
+    display: none;
+  }
+
+  /* line 269, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .navitem {
+    width: 100%;
+    float: none;
+  }
+  /* line 272, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .navitem a {
+    background: none;
+    padding: 10px;
+    margin-left: -2.8em;
+  }
+
+  /* line 278, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .nav-active {
+    display: block;
+  }
+
+  /* line 281, /Users/Neeraj/Documents/com381/quiet-eyrie-2061/app/assets/stylesheets/scaffolds.scss */
+  .nav-mobile-open {
+    border-radius: 0.313em 0.313em 0 0;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
