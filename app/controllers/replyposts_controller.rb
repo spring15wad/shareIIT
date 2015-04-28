@@ -1,5 +1,6 @@
 class ReplypostsController < ApplicationController
-  before_action :set_replypost, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_replypost, only: [:edit, :update, :destroy]
 
   # GET /replyposts
   # GET /replyposts.json
@@ -20,11 +21,12 @@ class ReplypostsController < ApplicationController
   # POST /replyposts.json
   def create
     @replypost = Replypost.new(replypost_params)
+    @replypost.request_id = $testa
     @replypost.replyuid = current_user.id
 
     respond_to do |format|
       if @replypost.save
-        format.html { redirect_to @replypost, notice: 'Replypost was successfully created.' }
+        format.html { redirect_to :back, notice: 'Replypost was successfully created.' }
         format.json { render :show, status: :created, location: @replypost }
       else
         format.html { render :new }
@@ -36,9 +38,10 @@ class ReplypostsController < ApplicationController
   # PATCH/PUT /replyposts/1
   # PATCH/PUT /replyposts/1.json
   def update
+    @replypostred = root_url + $testa.to_s
     respond_to do |format|
       if @replypost.update(replypost_params)
-        format.html { redirect_to @replypost, notice: 'Replypost was successfully updated.' }
+        format.html { redirect_to @replypostred, notice: 'Replypost was successfully updated.' }
         format.json { render :show, status: :ok, location: @replypost }
       else
         format.html { render :edit }
@@ -65,6 +68,6 @@ class ReplypostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def replypost_params
-      params.require(:replypost).permit(:content, :replyuid)
+      params.require(:replypost).permit(:content)
     end
 end

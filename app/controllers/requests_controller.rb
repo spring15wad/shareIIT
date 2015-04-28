@@ -19,6 +19,7 @@ class RequestsController < ApplicationController
   def show
     @replyposts = Replypost.all
     @replypost = Replypost.new
+    $testa = @request.id
   end
 
 
