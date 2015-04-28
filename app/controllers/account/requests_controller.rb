@@ -18,7 +18,7 @@ class Account::RequestsController < ApplicationController
     @request.user_id = current_user.id
     respond_to do |format|
       if @request.save
-        format.html { redirect_to public_request_path(@request), notice: 'Request was successfully created.' }
+        format.html { redirect_to public_request_path(@request) }
         format.json { render :show, status: :created, location: @request }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class Account::RequestsController < ApplicationController
   def update
     respond_to do |format|
       if @request.update(request_params)
-        format.html { redirect_to public_request_path(@request), notice: 'Request was successfully updated.' }
+        format.html { redirect_to public_request_path(@request) }
         format.json { render :show, status: :ok, location: @request }
       else
         format.html { render :edit }
@@ -46,7 +46,7 @@ class Account::RequestsController < ApplicationController
   def destroy
     @request.destroy
     respond_to do |format|
-      format.html { redirect_to account_url, notice: 'Request was successfully destroyed.' }
+      format.html { redirect_to account_url}
       format.json { head :no_content }
     end
   end
