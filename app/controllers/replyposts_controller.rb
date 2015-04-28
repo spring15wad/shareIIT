@@ -7,11 +7,6 @@ class ReplypostsController < ApplicationController
     @replyposts = Replypost.all
   end
 
-  # GET /replyposts/1
-  # GET /replyposts/1.json
-  def show
-  end
-
   # GET /replyposts/new
   def new
     @replypost = Replypost.new
@@ -25,6 +20,7 @@ class ReplypostsController < ApplicationController
   # POST /replyposts.json
   def create
     @replypost = Replypost.new(replypost_params)
+    @replypost.replyuid = current_user.id
 
     respond_to do |format|
       if @replypost.save
@@ -32,7 +28,7 @@ class ReplypostsController < ApplicationController
         format.json { render :show, status: :created, location: @replypost }
       else
         format.html { render :new }
-        format.json { render json: @replypost.errors, status: :unprocessable_entity }
+        format.json { render json: :back.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +52,7 @@ class ReplypostsController < ApplicationController
   def destroy
     @replypost.destroy
     respond_to do |format|
-      format.html { redirect_to replyposts_url, notice: 'Replypost was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Replypost was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
