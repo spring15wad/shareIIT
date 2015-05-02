@@ -29,7 +29,6 @@
           Welcome,
           = link_to current_user.name, account_path, class: "linktouser"
       - else
-        %p#noticewhite= notice
         .wrapper
           .main
             %a#head{:href => root_url}
