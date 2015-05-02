@@ -1,12 +1,15 @@
-%h1.title= @request.title
-%div
+- if user_signed_in?
+ %h1.title= @request.title
+ %div
   = @request.description
   %small
-    Posted by
-    - if current_user && @request.user.name == current_user.name
-      = link_to "You", account_path
-    - else
-      = @request.user.name
+   Posted by
+   - if current_user && @request.user.name == current_user.name
+    = link_to "You", account_path
+   - else
+    = @request.user.name
   =render 'replyposts/form'
   =render 'replyposts/index'
+- else
+
 

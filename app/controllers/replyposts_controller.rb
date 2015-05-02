@@ -55,7 +55,7 @@ class ReplypostsController < ApplicationController
   def destroy
     @replypost.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Replypost was successfully destroyed.' }
+      format.html { redirect_to ':back', notice: 'Replypost was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
