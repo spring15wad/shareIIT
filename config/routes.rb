@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/account', to: 'account#index'
 
   namespace :account do
-    resources :requests, except: ['index', 'show']
+    resources :requests, except: ['index']
   end
 
   get '/:id', to: 'requests#show', as: 'public_request'

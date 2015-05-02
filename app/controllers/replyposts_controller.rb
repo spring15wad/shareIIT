@@ -26,7 +26,7 @@ class ReplypostsController < ApplicationController
 
     respond_to do |format|
       if @replypost.save
-        format.html { redirect_to :back, notice: 'Replypost was successfully created.' }
+        format.html { redirect_to :back }
         format.json { render :show, status: :created, location: @replypost }
       else
         format.html { render :new }
@@ -41,7 +41,7 @@ class ReplypostsController < ApplicationController
     @replypostred = root_url + $testa.to_s
     respond_to do |format|
       if @replypost.update(replypost_params)
-        format.html { redirect_to @replypostred, notice: 'Replypost was successfully updated.' }
+        format.html { redirect_to @replypostred }
         format.json { render :show, status: :ok, location: @replypost }
       else
         format.html { render :edit }
@@ -55,7 +55,7 @@ class ReplypostsController < ApplicationController
   def destroy
     @replypost.destroy
     respond_to do |format|
-      format.html { redirect_to ':back', notice: 'Replypost was successfully destroyed.' }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end

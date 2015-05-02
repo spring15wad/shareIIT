@@ -7,11 +7,9 @@
           %li= msg
 
   .field
-    = f.label :title
-    = f.text_field :title
+    = f.text_field :title, :size => "40x1", :placeholder => "Post Title"
   .field
-    = f.label :description
-    = f.text_area :description
+    = f.text_area :description, :size => "40x3", :placeholder => "Post Content"
   = radio_button("request","requesttype", "service")
   = label_tag(:requesttype_service, "Request Services")
   = radio_button("request","requesttype", "book")
